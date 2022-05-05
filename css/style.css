@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    margin: auto;
+}
+.grid__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer";
+}
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+
+header{
+    background-color: red;
+    height: auto;
+    width: 100%;
+}
+.header__titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.header__titulo h1{
+    color: white;
+    font-size: 45px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+main{
+    margin: auto auto;
+    background-image: url(../pics/coder-fondp.jpg);
+    background-size: cover;
+    backdrop-filter: sepia(80%);
+    background-position: center;
+    background-repeat: no-repeat;width: 100%;
+}
+.main__links{
+    color: white;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.main__links h3{
+    color: black;
+    font-size: 40px;
+    font-family: 'Koulen', cursive;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 65%;
+    margin: 60px auto;
+}
+.main__links__img{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-bottom: 100px;
+}
+.main__links__img__git{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 50%;
+    margin: 0 auto;
+}
+.main__links__img__git a img{
+    width: 250px;
+}
+.main__links__img__git p{
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 19px;
+    text-decoration:underline 2px solid red;
+    background-color: rgba(255, 255, 255, 0.699);
+
+}
+
+.main__links__img__pag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 50%;
+    margin: 0 auto;
+}
+.main__links__img__pag a img{
+    width: 260px;
+}
+.main__links__img__pag p{
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 19px;
+    text-decoration:underline 2px solid red;
+    background-color: rgba(255, 255, 255, 0.699);
+}
+
+
+footer{
+    background-color: red;
+}
+footer h2{
+    color: white;
+    font-size: 25px;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+}
+
+@media screen and (min-width: 583px){
+    .main__links__img{
+        gap: 110px;
+        margin-bottom: 100px;
+    }
+
+    footer h2{
+        font-size: 30px;
+    }
+
+}
+@media screen and (min-width: 950px){
+    .main__links{
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .main__links h3{
+        font-size: 70px;
+        margin-top: 200px;
+        margin-bottom: -70px;
+        background-color: rgba(255, 255, 255, 0.412);
+    }
+    .main__links__img{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+}
